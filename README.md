@@ -1,68 +1,101 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pixeldust Front-end Assignment
 
-## Available Scripts
+> Shift booking application
 
-In the project directory, you can run:
+Implement a shift booking application with and utilize the provided mock API.
+See **[documentation](api/README.md)** for the API.
 
-### `npm start`
+The application must implement the following views according the [design spec](./design-spec.pdf):
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **My shifts**
+  - lists all booked shifts
+  - shifts are grouped by dates
+  - shifts can be cancelled
+- **Available shifts**
+  - filter shifts by the city
+  - shifts are grouped by dates
+  - shifts can be booked or cancelled
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Relevant assets can be found in [`./assets`](./assets).
 
-### `npm test`
+Considerations:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- you can choose to build the application in any front-end framework like React Js, Vue Js or any similar.
+- we expect clean and robust state management
+- we do not expect you to use a lot of time for the setup - you may use a starter repo
+- the UI design is a reference and 1:1 implementation is not absolutely necessary
+- creative skills can be used to improve the design
 
-### `npm run build`
+Submission:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- fork this repository to your account and for submission raise a pull request againt base repository once you're done with your solution
+- put created app under solution repository
+- include instructions how to run the app
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Mock API run instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Requirements:
 
-### `npm run eject`
+- Node.js (recommended v. >=9)
+- NPM v. >=5
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm install
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+API server runs at `localhost:8080`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Solution
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Mock API run instructions
 
-## Learn More
+Requirements:
+Node.js (recommended v. >=9)
+NPM v. >=5
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+API server runs at localhost:8080
 
-### Code Splitting
+## Running the app
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```
+git clone --recursive [URL to Git repo]
+```
 
-### Analyzing the Bundle Size
+- Make sure api is running
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
+cd [root]
+npm install
+npm run
+npm start
+```
 
-### Making a Progressive Web App
+- Start the React app
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+cd shift-booking-app
+npm install
+npm start
+```
 
-### Advanced Configuration
+## App details
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- Available shifts shows all the shifts obtained from the api for 3 different areas
+- On clicking "Book" button, the "My shifts" tab gets populated.
+- You can delete any shift from "My shifts"
 
-### Deployment
+## App outcomes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- Was able to render the logic of booking and deleting of shifts
+- Unable to render the required UI for the "Book" buttons as described in the design spec
 
-### `npm run build` fails to minify
+## Technologies used
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- React Hooks
+- CSS
