@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CurrentShift from "./CurrentShift";
 import AvailableShift from "./AvailableShift";
 import { Link } from "react-router-dom";

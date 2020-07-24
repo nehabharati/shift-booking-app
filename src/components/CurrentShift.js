@@ -3,7 +3,6 @@ import axios from "axios";
 
 export default function CurrentShift() {
   const [myItem, setMyItem] = useState([]);
-  const [listLength, setListLength] = useState(0);
 
   useEffect(() => {
     fetch("http://127.0.0.1:8080/shifts")
@@ -11,21 +10,6 @@ export default function CurrentShift() {
       .then((data) => {
         setMyItem(data);
       });
-
-    // var listLength = document.getElementById("listLength");
-    // var liNodes = [];
-
-    // for (var i = 0; i < listLength.childNodes.length; i++) {
-    //   if (listLength.childNodes[i].nodeName == "LI") {
-    //     liNodes.push(listLength.childNodes[i]);
-    //   }
-    // }
-    // let listLength = document
-    //   .getElementById("listLength")
-    //   .getElementsByTagName("li");
-    // setListLength(listLength.length);
-
-    // console.log(document.getElementById("listLength").length);
   }, []);
 
   function deleteShift(id) {
@@ -69,13 +53,18 @@ export default function CurrentShift() {
                 >
                   <ul>
                     <li id="listLength">
-                      {time1}-{time2}
-                      <span>{thing.area}</span>
+                      <span>
+                        <h6>
+                          {time1}-{time2}
+                        </h6>
+                        <span>{thing.area}</span>
+                      </span>
+                      <span>
+                        <button onClick={() => deleteShift(thing.id)}>
+                          Cancel
+                        </button>
+                      </span>
                     </li>
-
-                    <button onClick={() => deleteShift(thing.id)}>
-                      Cancel
-                    </button>
                   </ul>
                 </span>
               </li>

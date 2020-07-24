@@ -6,7 +6,7 @@ import AvailableShift from "./components/AvailableShift";
 import Helsinki from "./components/Helsinki";
 import Turku from "./components/Turku";
 import Tampere from "./components/Tampere";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

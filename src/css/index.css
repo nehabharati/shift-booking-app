@@ -137,9 +137,6 @@ div > ul {
 .currentTime button {
   border-radius: 50px;
   width: 5em;
-  position: absolute;
-  margin-top: 0.5em;
-  margin-left: 65%;
   border: 1px solid #fe93b3;
   background-color: #f1f4f8;
   font-weight: bold;
@@ -149,14 +146,18 @@ div > ul {
 
 #listLength {
   display: flex;
-  flex-direction: column; }
-  #listLength span {
+  justify-content: space-between; }
+  #listLength span:first-child {
+    display: flex;
+    flex-direction: column;
     font-size: 0.9em;
     font-weight: 500;
     opacity: 0.9;
     color: #a4b8d3; }
-
-.active {
-  color: #004fb4; }
+  #listLength h6 {
+    font-size: 1.1em;
+    font-weight: 700;
+    opacity: 0.9;
+    color: #000; }
 
 /*# sourceMappingURL=index.css.map */
